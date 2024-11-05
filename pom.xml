@@ -503,6 +503,7 @@
     <modules>
         <module>build-tools</module>
         <module>modules</module>
+        <module>dingprojdgeo</module>
     </modules>
 
 </project>

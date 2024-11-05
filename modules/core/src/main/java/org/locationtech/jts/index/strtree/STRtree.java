@@ -121,6 +121,7 @@ implements SpatialIndex, Serializable
    * group them into runs of size M (the node capacity). For each run, creates
    * a new (parent) node.
    */
+  @Override
   protected List createParentBoundables(List childBoundables, int newLevel) {
     Assert.isTrue(!childBoundables.isEmpty());
     int minLeafCount = (int) Math.ceil((childBoundables.size() / (double) getNodeCapacity()));

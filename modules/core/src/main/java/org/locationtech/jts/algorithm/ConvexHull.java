@@ -295,7 +295,8 @@ public class ConvexHull
       while (
           ! ps.empty() && 
           Orientation.index((Coordinate) ps.peek(), p, cp) > 0) {
-         p = (Coordinate) ps.pop();
+          // 回退上个点判断cp是否在左边还是右边，https://blog.csdn.net/viafcccy/article/details/87483567
+          p = (Coordinate) ps.pop();
       }
       ps.push(p);
       ps.push(cp);

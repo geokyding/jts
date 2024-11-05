@@ -519,8 +519,9 @@ public class OverlayNG
      */
     if (OverlayUtil.isFloating(pm)) {
       boolean isAreaConsistent = OverlayUtil.isResultAreaConsistent(inputGeom.getGeometry(0), inputGeom.getGeometry(1), opCode, result);
-      if (! isAreaConsistent)
-        throw new TopologyException("Result area inconsistent with overlay operation");    
+      if (! isAreaConsistent) {
+          throw new TopologyException("Result area inconsistent with overlay operation");
+      }
     }
     return result;
   }

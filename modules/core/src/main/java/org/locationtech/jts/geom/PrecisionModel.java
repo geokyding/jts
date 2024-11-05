@@ -35,7 +35,7 @@ import org.locationtech.jts.io.WKTWriter;
  * Constructive methods (such as boolean operations) always round computed
  * coordinates to the appropriate precision model.
  * <p>
- * Three types of precision model are supported:
+ * Three types of precision model are supported: 精度模型默认使用双精度浮点型
  * <ul>
  * <li>FLOATING - represents full double precision floating point.
  * This is the default precision model used in JTS
@@ -44,7 +44,7 @@ import org.locationtech.jts.io.WKTWriter;
  *  A Fixed Precision Model is specified by a <b>scale factor</b>.
  *  The scale factor specifies the size of the grid which numbers are rounded to.
  *  Input coordinates are mapped to fixed coordinates according to the following
- *  equations:
+ *  equations: 截取小数点的scale位
  *    <UL>
  *      <LI> jtsPt.x = round( (inputPt.x * scale ) / scale
  *      <LI> jtsPt.y = round( (inputPt.y * scale ) / scale
